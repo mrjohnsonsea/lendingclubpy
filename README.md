@@ -48,8 +48,8 @@ Key predictors include FICO credit score range, debt-to-income ratio, loan amoun
 
 | Model | Test RMSE |
 |---|---|
-| Random Forest (tuned) | **3.89** |
-| Neural Network (MLP) | 4.91 |
+| Random Forest (tuned) | **4.29** |
+| Neural Network (MLP) | 4.50 |
 
 - **Random Forest**: Hyperparameters tuned via random search over `n_estimators` (50–1000) and `max_features` (1–8)
 - **Neural Network**: Grid search over hidden layer architectures and activation functions (`tanh`, `relu`); up to 1500 training iterations
@@ -62,10 +62,10 @@ Key predictors include FICO credit score range, debt-to-income ratio, loan amoun
 
 ## Key Findings
 
-1. **FICO score is the dominant predictor** (~45% of permutation importance). Applicants with higher credit scores receive meaningfully lower interest rates.
-2. **DTI and loan term are the next most important** (~16% each). Higher debt-to-income ratios and 60-month terms both push rates up.
+1. **FICO score is the dominant predictor** (~47% of permutation importance). Applicants with higher credit scores receive meaningfully lower interest rates.
+2. **DTI and loan term are the next most important** (~16-17% each). Higher debt-to-income ratios and 60-month terms both push rates up.
 3. **FICO score has a non-linear ceiling effect**: Rates stop declining above a FICO score of approximately 825.
-4. **Random Forest substantially outperforms MLP** (RMSE 3.89 vs. 4.91), suggesting tree-based methods better capture the interaction effects in this tabular credit dataset.
+4. **Random Forest substantially outperforms MLP** (RMSE 4.29 vs. 4.5), suggesting tree-based methods better capture the interaction effects in this tabular credit dataset.
 5. **Feature engineering matters**: Missing indicator variables and transformations for skewed features meaningfully improved model performance.
 
 ---
