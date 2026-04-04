@@ -111,3 +111,7 @@ lendingclubpy/
 2. Install dependencies: `pip install pandas numpy matplotlib seaborn scikit-learn lime openpyxl`
 3. Place the raw data file at `data/raw/LC_HW2.csv`
 4. Open and run [`notebooks/lendingclub_interest_rate_prediction.ipynb`](notebooks/lendingclub_interest_rate_prediction.ipynb) top to bottom
+
+---
+
+README written with the assistance of [Claude Code](https://claude.ai/code) by Anthropic.
